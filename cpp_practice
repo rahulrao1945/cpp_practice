@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
 int main(){
-    cout << "Hello this is my first code to check that its correctly upload it on git hub.";
+    cout << " hello";
     return 0;
 }
