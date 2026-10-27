@@ -50,26 +50,84 @@
 
 
 // # Type conversion ------
+// #include <iostream>
+// using namespace std;
+// class tim
+// {
+//     int h,m;
+//     public:
+//     void output();
+//     tim(int x)
+//     {
+//         h=x/60;
+//         m=x%60;
+//     }
+//     operator int(){
+//         return(m+h*60);
+//     }
+// };
+// void tim::output()
+// {
+//     cout<<"time is "<<h<<" hours and "<<m<<" minutes."<<endl;
+// }
+// int main()
+// {
+//     tim t=135;
+//     int min;
+//     t.output();
+//     min = (int)t;
+//     cout << "total minutes are "<<min<<endl;
+//     return 0;
+// }
+
+
+
+34
 #include <iostream>
 using namespace std;
-class tim
+class len1
 {
-    int h,m;
+    int f,i;
+    public:
+    void input();
+    int getf()
+    {
+        return f;
+    }
+    int geti()
+    {
+        return i;
+    }
+    
+};
+void len1::input()
+{
+    cout<<"enter length in feets and inches : ";
+    cin>>f>>i;
+}
+class len2
+{
+    int m,cm;
     public:
     void output();
-    tim(int x)
+    len2(len1 x)
     {
-        h=x/60;
-        m=x%60;
+        int tin = x.geti() + (x.getf()*12);
+        float tcm = tin*2.54;
+        m = tcm/100;
+        cm = tcm - m*100;
     }
 };
-void tim::output()
+void len2::output()
 {
-    cout<<"time is "<<h<<" hours and "<<m<<" minutes."<<endl;
+    cout<<m<<" meters and "<<cm<<" centimeters."<<endl;
 }
 int main()
 {
-    tim t=135;
-    t.output();
+    len1 l1;
+    l1.input();
+    len2 l2 = l1;
+    l2.output();
+    
     return 0;
 }
