@@ -82,52 +82,68 @@
 
 
 
-34
-#include <iostream>
-using namespace std;
-class len1
-{
-    int f,i;
-    public:
-    void input();
-    int getf()
-    {
-        return f;
-    }
-    int geti()
-    {
-        return i;
-    }
+
+// #include <iostream>
+// using namespace std;
+// class len1
+// {
+//     int f,i;
+//     public:
+//     void input();
+//     int getf()
+//     {
+//         return f;
+//     }
+//     int geti()
+//     {
+//         return i;
+//     }
     
-};
-void len1::input()
-{
-    cout<<"enter length in feets and inches : ";
-    cin>>f>>i;
-}
-class len2
-{
-    int m,cm;
-    public:
-    void output();
-    len2(len1 x)
-    {
-        int tin = x.geti() + (x.getf()*12);
-        float tcm = tin*2.54;
-        m = tcm/100;
-        cm = tcm - m*100;
-    }
-};
-void len2::output()
-{
-    cout<<m<<" meters and "<<cm<<" centimeters."<<endl;
-}
-int main()
-{
-    len1 l1;
-    l1.input();
-    len2 l2 = l1;
-    l2.output();
+// };
+// void len1::input()
+// {
+//     cout<<"enter length in feets and inches : ";
+//     cin>>f>>i;
+// }
+// class len2
+// {
+//     int m,cm;
+//     public:
+//     void output();
+//     len2(len1 x)
+//     {
+//         int tin = x.geti() + (x.getf()*12);
+//         float tcm = tin*2.54;
+//         m = tcm/100;
+//         cm = tcm - m*100;
+//     }
+// };
+// void len2::output()
+// {
+//     cout<<m<<" meters and "<<cm<<" centimeters."<<endl;
+// }
+// int main()
+// {
+//     len1 l1;
+//     l1.input();
+//     len2 l2 = l1;
+//     l2.output();
     
-    return 0;
-}
+//     return 0;
+//}
+
+// #include<iostream>
+// using namespace std;
+//  void swap(int *a, int *b){
+//     int temp = *a;
+//     *a = *b;
+//     *b = temp;
+//  };
+//  int main(){
+//     int a,b;
+//     cin >> a >> b;
+//     swap(&a,&b);
+//     cout << "a = " << a << endl;
+//     cout << "b = " << b;
+//     return 0;
+//  }
